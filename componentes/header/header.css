@@ -1,0 +1,40 @@
+header {
+    display: flex;
+    width: 100%s;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.logo span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+
+.github-btn {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.github-btn:hover {
+    background-color: #333;
+}
