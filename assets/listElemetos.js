@@ -123,7 +123,5 @@ const listatablaperiodica = [
   ];
 
 
-// Ejemplo de uso:
- const numeroAtomico = obtenerElementosPorCategoria("Metal");
 
-console.log(numeroAtomico)
+export{listatablaperiodica};
