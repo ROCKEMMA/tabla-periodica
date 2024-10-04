@@ -1,5 +1,3 @@
-
-
 const listatablaperiodica = [
 
     { numeroAtomico: 1, masaAtomica: 1.008, simboloQuimico: "H", nombre: "Hidrógeno", configuracionElectronica: "1s1", numeroDeValencia: 1, categoria: "No metal" },
@@ -14,7 +12,7 @@ const listatablaperiodica = [
     { numeroAtomico: 10, masaAtomica: 20.180, simboloQuimico: "Ne", nombre: "Neón", configuracionElectronica: "[He] 2s2 2p6", numeroDeValencia: 0, categoria: "Gas noble" },
     { numeroAtomico: 11, masaAtomica: 22.990, simboloQuimico: "Na", nombre: "Sodio", configuracionElectronica: "[Ne] 3s1", numeroDeValencia: 1, categoria: "Metal alcalino" },
     { numeroAtomico: 12, masaAtomica: 24.305, simboloQuimico: "Mg", nombre: "Magnesio", configuracionElectronica: "[Ne] 3s2", numeroDeValencia: 2, categoria: "Metal alcalinotérreo" },
-    { numeroAtomico: 13, masaAtomica: 26.982, simboloQuimico: "Al", nombre: "Aluminio", configuracionElectronica: "[Ne] 3s2 3p1", numeroDeValencia: 3, categoria: "Metal de transición" },
+    { numeroAtomico: 13, masaAtomica: 26.982, simboloQuimico: "Al", nombre: "Aluminio", configuracionElectronica: "[Ne] 3s2 3p1", numeroDeValencia: 3, categoria: "Metal" },
     { numeroAtomico: 14, masaAtomica: 28.085, simboloQuimico: "Si", nombre: "Silicio", configuracionElectronica: "[Ne] 3s2 3p2", numeroDeValencia: 4, categoria: "Metaloide" },
     { numeroAtomico: 15, masaAtomica: 30.974, simboloQuimico: "P", nombre: "Fósforo", configuracionElectronica: "[Ne] 3s2 3p3", numeroDeValencia: 5, categoria: "No metal" },
     { numeroAtomico: 16, masaAtomica: 32.06, simboloQuimico: "S", nombre: "Azufre", configuracionElectronica: "[Ne] 3s2 3p4", numeroDeValencia: 2, categoria: "No metal" },
@@ -72,7 +70,7 @@ const listatablaperiodica = [
     { numeroAtomico: 68, masaAtomica: 167.26, simboloQuimico: "Er", nombre: "Erbio", configuracionElectronica: "[Xe] 4f12 6s2", numeroDeValencia: 14, categoria: "Lantánido" },
     { numeroAtomico: 69, masaAtomica: 168.93, simboloQuimico: "Tm", nombre: "Tulio", configuracionElectronica: "[Xe] 4f13 6s2", numeroDeValencia: 15, categoria: "Lantánido" },
     { numeroAtomico: 70, masaAtomica: 173.04, simboloQuimico: "Yb", nombre: "Iterbio", configuracionElectronica: "[Xe] 4f14 6s2", numeroDeValencia: 16, categoria: "Lantánido" },
-    { numeroAtomico: 71, masaAtomica: 174.97, simboloQuimico: "Lu", nombre: "Lutecio", configuracionElectronica: "[Xe] 4f14 5d1 6s2", numeroDeValencia: 17, categoria: "Lantánido" },
+    { numeroAtomico: 71, masaAtomica: 174.97, simboloQuimico: "Lu", nombre: "Lutecio", configuracionElectronica: "[Xe] 4f14 5d1 6s2", numeroDeValencia: 17, categoria: "Metal de transición" },
     { numeroAtomico: 72, masaAtomica: 178.49, simboloQuimico: "Hf", nombre: "Hafnio", configuracionElectronica: "[Xe] 4f14 5d2 6s2", numeroDeValencia: 18, categoria: "Metal de transición" },
     { numeroAtomico: 73, masaAtomica: 180.95, simboloQuimico: "Ta", nombre: "Tántalo", configuracionElectronica: "[Xe] 4f14 5d3 6s2", numeroDeValencia: 19, categoria: "Metal de transición" },
     { numeroAtomico: 74, masaAtomica: 183.84, simboloQuimico: "W", nombre: "Wolframio", configuracionElectronica: "[Xe] 4f14 5d4 6s2", numeroDeValencia: 20, categoria: "Metal de transición" },
@@ -86,7 +84,7 @@ const listatablaperiodica = [
     { numeroAtomico: 82, masaAtomica: 207.2, simboloQuimico: "Pb", nombre: "Plomo", configuracionElectronica: "[Xe] 4f14 5d10 6s2 6p2", numeroDeValencia: 28, categoria: "Metal" },
     { numeroAtomico: 83, masaAtomica: 208.98, simboloQuimico: "Bi", nombre: "Bismuto", configuracionElectronica: "[Xe] 4f14 5d10 6s2 6p3", numeroDeValencia: 29, categoria: "Metal" },
     { numeroAtomico: 84, masaAtomica: 209, simboloQuimico: "Po", nombre: "Polonio", configuracionElectronica: "[Xe] 4f14 5d10 6s2 6p4", numeroDeValencia: 30, categoria: "Metaloide" },
-    { numeroAtomico: 85, masaAtomica: 210, simboloQuimico: "At", nombre: "Astato", configuracionElectronica: "[Xe] 4f14 5d10 6s2 6p5", numeroDeValencia: 31, categoria: "Metaloide" },
+    { numeroAtomico: 85, masaAtomica: 210, simboloQuimico: "At", nombre: "Astato", configuracionElectronica: "[Xe] 4f14 5d10 6s2 6p5", numeroDeValencia: 31, categoria: "Halógeno" },
     { numeroAtomico: 86, masaAtomica: 222, simboloQuimico: "Rn", nombre: "Radón", configuracionElectronica: "[Xe] 4f14 5d10 6s2 6p6", numeroDeValencia: 0, categoria: "Gas noble" },
     { numeroAtomico: 87, masaAtomica: 223, simboloQuimico: "Fr", nombre: "Francio", configuracionElectronica: "[Rn] 7s1", numeroDeValencia: 1, categoria: "Metal alcalino" },
     { numeroAtomico: 88, masaAtomica: 226, simboloQuimico: "Ra", nombre: "Radio", configuracionElectronica: "[Rn] 7s2", numeroDeValencia: 2, categoria: "Metal alcalinotérreo" },
@@ -104,7 +102,7 @@ const listatablaperiodica = [
     { numeroAtomico: 100, masaAtomica: 257, simboloQuimico: "Fm", nombre: "Fermio", configuracionElectronica: "[Rn] 5f12 7s2", numeroDeValencia: 14, categoria: "Actínido" },
     { numeroAtomico: 101, masaAtomica: 258, simboloQuimico: "Md", nombre: "Mendelevio", configuracionElectronica: "[Rn] 5f13 7s2", numeroDeValencia: 15, categoria: "Actínido" },
     { numeroAtomico: 102, masaAtomica: 259, simboloQuimico: "No", nombre: "Nobelio", configuracionElectronica: "[Rn] 5f14 7s2", numeroDeValencia: 16, categoria: "Actínido" },
-    { numeroAtomico: 103, masaAtomica: 262, simboloQuimico: "Lr", nombre: "Lawrencio", configuracionElectronica: "[Rn] 5f14 7s2 7p1", numeroDeValencia: 17, categoria: "Actínido" },
+    { numeroAtomico: 103, masaAtomica: 262, simboloQuimico: "Lr", nombre: "Lawrencio", configuracionElectronica: "[Rn] 5f14 7s2 7p1", numeroDeValencia: 17, categoria: "Metal de transición" },
     { numeroAtomico: 104, masaAtomica: 267, simboloQuimico: "Rf", nombre: "Rutherfordio", configuracionElectronica: "[Rn] 5f14 6d2 7s2", numeroDeValencia: 18, categoria: "Metal de transición" },
     { numeroAtomico: 105, masaAtomica: 270, simboloQuimico: "Db", nombre: "Dubnio", configuracionElectronica: "[Rn] 5f14 6d3 7s2", numeroDeValencia: 19, categoria: "Metal de transición" },
     { numeroAtomico: 106, masaAtomica: 271, simboloQuimico: "Sg", nombre: "Seaborgio", configuracionElectronica: "[Rn] 5f14 6d4 7s2", numeroDeValencia: 20, categoria: "Metal de transición" },
@@ -118,7 +116,7 @@ const listatablaperiodica = [
     { numeroAtomico: 114, masaAtomica: 289, simboloQuimico: "Fl", nombre: "Flerovio", configuracionElectronica: "[Rn] 5f14 6d10 7s2 7p2", numeroDeValencia: 28, categoria: "Metal" },
     { numeroAtomico: 115, masaAtomica: 290, simboloQuimico: "Mc", nombre: "Moscovio", configuracionElectronica: "[Rn] 5f14 6d10 7s2 7p3", numeroDeValencia: 29, categoria: "Metal" },
     { numeroAtomico: 116, masaAtomica: 293, simboloQuimico: "Lv", nombre: "Livermorio", configuracionElectronica: "[Rn] 5f14 6d10 7s2 7p4", numeroDeValencia: 30, categoria: "Metal" },
-    { numeroAtomico: 117, masaAtomica: 294, simboloQuimico: "Ts", nombre: "Tenesino", configuracionElectronica: "[Rn] 5f14 6d10 7s2 7p5", numeroDeValencia: 31, categoria: "Metaloide" },
+    { numeroAtomico: 117, masaAtomica: 294, simboloQuimico: "Ts", nombre: "Tenesino", configuracionElectronica: "[Rn] 5f14 6d10 7s2 7p5", numeroDeValencia: 31, categoria: "Halógeno" },
     { numeroAtomico: 118, masaAtomica: 294, simboloQuimico: "Og", nombre: "Oganesón", configuracionElectronica: "[Rn] 5f14 6d10 7s2 7p6", numeroDeValencia: 0, categoria: "Gas noble" }
   ];
 

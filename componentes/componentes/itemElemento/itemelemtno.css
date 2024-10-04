@@ -74,7 +74,8 @@ background-color: rgb(103, 165, 133);
 
 
 .no-metal {
-   
+       color: white;
+
     border-radius: 0.3rem;
     background-color: rgb(245, 129, 27);
 }
@@ -134,4 +135,33 @@ background-color: rgb(103, 165, 133);
 
     background-color: rgb(103, 165, 133);
 
+}
+.espaciob1{
+    display: grid;
+    width: 100%;
+    height: 100%;
+
+    grid-column-start:2;
+    grid-column-end: 18;
+
+    grid-row-start:1;
+    grid-row-end:1;
+
+}
+.espaciob2{
+    display: grid;
+    width: 100%;
+    height: 100%;
+
+    grid-column-start:3;
+    grid-column-end: 13;
+
+    grid-row-start:4;
+    grid-row-end:1;
+}
+.lantánido{
+    display: none;
+}
+.actínido{
+    display: none;
 }
