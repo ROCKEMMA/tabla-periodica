@@ -38,3 +38,58 @@ nav ul li a {
 .github-btn:hover {
     background-color: #333;
 }
+
+
+/* responsive */
+
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+    header {
+        padding: 5px 15px; /* Reducir un poco el padding para pantallas medianas */
+    }
+
+    .logo span {
+        font-size: 16px; /* Ajustar el tamaño de fuente */
+    }
+
+    nav ul {
+        gap: 15px; /* Reducir el espacio entre elementos del menú */
+    }
+
+    nav ul li a {
+        font-size: 13px; /* Ajustar el tamaño de las fuentes del menú */
+    }
+
+    .github-btn {
+        font-size: 13px; /* Ajustar el tamaño del botón */
+        padding: 5px 12px; /* Ajustar el padding del botón */
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+    header {
+        flex-direction: column; /* Cambiar a diseño vertical */
+        align-items: flex-start; /* Alinear los elementos a la izquierda */
+        padding: 10px; /* Aumentar el padding para mejorar la accesibilidad */
+    }
+
+    .logo span {
+        font-size: 16px; /* Mantener un tamaño adecuado de la fuente */
+    }
+
+    nav ul {
+        flex-direction: column; /* Hacer que el menú sea vertical */
+        gap: 10px; /* Reducir el espacio entre los enlaces */
+    }
+
+    nav ul li a {
+        font-size: 12px; /* Ajustar el tamaño de los enlaces */
+    }
+
+    .github-btn {
+        width: 100%; /* Hacer que el botón ocupe el ancho completo */
+        text-align: center; /* Centrar el texto dentro del botón */
+        font-size: 12px; /* Ajustar el tamaño del texto */
+        padding: 8px 0; /* Ajustar el padding */
+    }
+}
