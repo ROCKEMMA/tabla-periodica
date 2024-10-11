@@ -57,6 +57,10 @@ El publico objetivo para esta aplicacion serian los estudiantes de bachillerato.
 ├── main.js
 └── README.md
 
+
+![Mi logo](./utils/img/Uml.png)
+
+
 ## Instalacion y forma de uso:
 Esta apliacion Web, no necesita de ninguna instalacion ya que esta se
 ejecuta desde cualquier navegador, no necesita de ningun inicio de secion para guardar datos, ya que estos se quedan guardados en el navegador.
