@@ -166,32 +166,3 @@
     }
 }
 
-@media only screen and (max-width: 767px) {
-    .tablabase {
-        grid-template-columns: repeat(18s, 1fr); /* Reducir a 4 columnas */
-        grid-template-rows: repeat(12, 1fr); /* Aumentar las filas para mejor ajuste */
-        gap: 0.2rem; /* Reducir aún más el espacio */
-    }
-
-    .tarjeta {
-        width: 100%;
-        height: auto; /* Permitir que la altura se ajuste automáticamente */
-    }
-
-    .simbolo-quimico {
-        font-size: 1.5rem; /* Reducir el tamaño de la fuente para móviles */
-    }
-
-    .nombre-elemento {
-        grid-column: 2 / 4; /* Ajustar el espacio que ocupa el nombre en pantallas pequeñas */
-        grid-row-start: 5;
-    }
-
-    .lantánido, .actínido {
-        display: block; /* Mostrar lantánidos y actínidos en pantallas pequeñas si es necesario */
-    }
-
-    .espaciob1, .espaciob2 {
-        display: none; /* Ocultar espacios vacíos en pantallas pequeñas */
-    }
-}
