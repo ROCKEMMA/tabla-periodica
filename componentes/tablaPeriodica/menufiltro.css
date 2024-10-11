@@ -1,0 +1,48 @@
+.contenedor-botones {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.div-botones-categorias {
+    display: flex;
+    gap: 10px; /* Espacio entre los botones */
+}
+
+/* Botones de categoría */
+.boton-categoria {
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Botón activo con estilo destacado */
+.boton-categoria.activo {
+    background-color: #4A4A4A;
+    color: white;
+}
+
+/* Efecto hover sobre los botones */
+.boton-categoria:hover {
+    background-color: #4A4A4A;
+    color: white;
+}
+
+/* Color gris para los elementos no seleccionados */
+.gris {
+    background-color: #e0e0e0;
+    color: #888;
+}
+
+/* Clase activa para destacar el botón seleccionado */
+.boton-categoria.activo {
+    background-color: #4CAF50; /* Color de tu elección para el botón activo */
+    color: white;
+}
