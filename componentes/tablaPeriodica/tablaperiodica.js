@@ -6,9 +6,9 @@ export function elementinfo(contenedor, contenedorTabla) {
 
     // Crear el contenedor de botones
     const divBotones = document.createElement("div");
-    divBotones.className = 'div-botones-categorias';
+    divBotones.className = 'div-botones-categorias'; 
 
-    // Crear botón para 'todo' que muestra todos los elementos
+    // Crear botón para 'todo' quee muestra todos los elementos
     const botonTodo = document.createElement("button");
     botonTodo.innerText = 'Todo';
     botonTodo.className = 'boton-categoria activo'; // Estilo para el botón 'Todo',
