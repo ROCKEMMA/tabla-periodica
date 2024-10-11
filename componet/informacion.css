@@ -1,0 +1,112 @@
+.element-details {
+border: 5px solid black;
+border-radius: 1rem;
+ display: grid;
+ width: 98.96%;
+ height: 100%;
+ grid-column-start: 1;
+ grid-column-end: 19;
+ grid-row-start: 8;
+ grid-row-end: 12;
+}
+.elementinfo{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(4,1fr);
+  
+
+}
+.mini-tarjeta {
+    
+
+    display: grid;
+    width: 75%; /* Ajusta el tamaño según tus necesidades */
+  
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #f0f0f0; /* Color de fondo */
+    grid-column-start: 3;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-div-tarjeta {
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en columna */
+    align-items: center; /* Centra los elementos */
+}
+
+.detalleselemento{
+    display: grid;
+    font-size: 0.5rem;
+    grid-column-start: 4;
+    grid-column-end: 10;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    font-size: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+.nombreelemento{
+    display: grid;
+    font-size: 0.5rem;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    font-size: 1rem;
+
+}
+.nombreatomico{
+    display: grid;
+    font-size: 0.5rem;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    font-size: 1rem;
+    justify-content: center;
+    align-items: center;
+   
+}
+.nombremasa{
+    display: grid;
+    font-size: 0.5rem;
+    grid-column-start: 6;
+    grid-column-end: 7;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    font-size: 1rem;
+    
+}
+.nombreconfiguracion{
+    display: grid;
+    font-size: 0.5rem;
+    grid-column-start: 6;
+    grid-column-end: 8;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    font-size: 1rem;
+}
+.nombrevalencia{
+    display: grid;
+    font-size: 0.5rem;
+    grid-column-start: 9;
+    grid-column-end: 10;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    font-size: 1rem;
+}
+.nombrecategoria{
+    display: grid;
+    font-size: 0.5rem;
+    grid-column-start: 9;
+    grid-column-end: 11;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    font-size: 1rem;
+}

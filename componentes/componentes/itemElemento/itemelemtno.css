@@ -1,34 +1,46 @@
-.tablabase{
+.tablabase {
     width: 100%;
     height: 100%;
-
     display: grid;
-    grid-template-columns: repeat(18,1fr);
-    grid-template-rows: repeat(10,1fr);
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: repeat(14, 1fr);
     gap: 0.5rem;
-
     justify-content: center;
     align-content: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-.info-div-tarjet{
+
+.tarjeta {
     width: 100%;
     height: 100%;
     border-radius: 0.3rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+    cursor: pointer;
+}
+
+.tarjeta:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al pasar el ratón */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Añade una sombra suave */
+}
+
+.info-div-tarjet {
+    width: 100%;
+    height: 100%;
     border-radius: 0.3rem;
     display: grid;
-    grid-template-columns: repeat(6,1fr);
-    grid-template-rows: repeat(6,1fr);
-    
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
 }
-.nombre-elemento{
+
+.nombre-elemento {
     display: grid;
     justify-self: center;
     align-items: center;
-    grid-column: 2/6;
+    grid-column: 2 / 6;
     grid-row-start: 5;
 }
-.simbolo-quimico{
+
+.simbolo-quimico {
     width: 100%;
     height: 100%;
     display: grid;
@@ -36,132 +48,102 @@
     justify-content: center;
     grid-column-start: 2;
     grid-column-end: 6;
-    grid-row-start:2 ;
-    grid-row-end:5 ;
-
+    grid-row-start: 2;
+    grid-row-end: 5;
 }
-.numero-atómico{
+
+.numero-atómico {
     display: grid;
     justify-self: center;
     align-items: center;
     grid-column: 1;
     grid-row-start: 1;
-
 }
-.masa-atomica{
+
+.masa-atomica {
     justify-self: center;
     align-items: center;
     display: grid;
     grid-column-start: 4;
     grid-column-end: 7;
-    
-
 }
 
-/* colores */
-.color-para-working{
-background-color: rgb(245, 129, 27); 
-background-color: rgb(0, 37, 77);
-background-color: rgb(237, 181, 69);
-background-color: rgb(0, 106, 51);
-background-color: rgb(0, 137, 207);
-background-color: rgb(237, 18, 66);
-background-color: rgb(121, 24, 120);
-background-color: rgb(163, 181, 34);
-background-color: rgb(207, 234, 134);
-background-color: rgb(103, 165, 133);
-}
-
-
+/* Colores por categoría */
 .no-metal {
-       color: white;
-
+    color: white;
     border-radius: 0.3rem;
     background-color: rgb(245, 129, 27);
 }
-.metal-alcalino{
+
+.metal-alcalino {
     color: white;
-  
     border-radius: 0.3rem;
-    background-color: rgb(0, 37, 77)
-
+    background-color: rgb(0, 37, 77);
 }
-.gas-noble{
-    color: white;
 
+.gas-noble {
+    color: white;
     border-radius: 0.3rem;
     background-color: rgb(0, 106, 51);
-
 }
-.metal-alcalinotérreo{
+
+.metal-alcalinotérreo {
     border-radius: 0.3rem;
-
     background-color: rgb(237, 181, 69);
-
 }
-.metal-de-transición{
-    color: white;
 
+.metal-de-transición {
+    color: white;
     border-radius: 0.3rem;
     background-color: rgb(0, 137, 207);
-
 }
-.metal{
-    border-radius: 0.3rem;
+
+.metal {
     color: white;
-
+    border-radius: 0.3rem;
     background-color: rgb(121, 24, 120);
-
 }
-.metaloide{
+
+.metaloide {
     border-radius: 0.3rem;
     background-color: rgb(237, 18, 66);
-
 }
-.halógeno{
-    border-radius: 0.3rem;
 
+.halógeno {
+    border-radius: 0.3rem;
     background-color: rgb(163, 181, 34);
-
 }
-.lantánido{
-    border-radius: 0.3rem;
 
+.lantánido {
+    border-radius: 0.3rem;
     background-color: rgb(207, 234, 134);
-
 }
-.actínido{
+
+.actínido {
     border-radius: 0.3rem;
-
     background-color: rgb(103, 165, 133);
-
 }
-.espaciob1{
+
+.espaciob1 {
     display: grid;
     width: 100%;
     height: 100%;
-
-    grid-column-start:2;
+    grid-column-start: 2;
     grid-column-end: 18;
-
-    grid-row-start:1;
-    grid-row-end:1;
-
+    grid-row-start: 1;
+    grid-row-end: 1;
 }
-.espaciob2{
+
+.espaciob2 {
     display: grid;
     width: 100%;
     height: 100%;
-
-    grid-column-start:3;
+    grid-column-start: 3;
     grid-column-end: 13;
+    grid-row-start: 4;
+    grid-row-end: 1;
+}
 
-    grid-row-start:4;
-    grid-row-end:1;
-}
-.lantánido{
-    display: none;
-}
-.actínido{
+.lantánido, .actínido {
     display: none;
 }

@@ -4,19 +4,23 @@ export function tabla(categoriaSeleccionada = 'todo') {
     const tablabase = document.createElement("div");
     tablabase.className = 'tablabase';
 
-    // Filtrar los elementos de la tabla periódica según la categoría seleccionada
-    const elementosFiltrados = categoriaSeleccionada === 'todo'
-        ? listatablaperiodica // Mostrar todos si la categoría es 'todo'
-        : listatablaperiodica.filter(elemento => 
-            elemento.categoria.replace(/\s+/g, '-').toLowerCase() === categoriaSeleccionada
-        );
+    // Crear un div para mostrar los detalles del elemento seleccionado
+    const elementDetails = document.createElement("div");
+    elementDetails.className = 'element-details';
+    elementDetails.style.marginTop = '20px';
+    tablabase.appendChild(elementDetails); // Añadir el div de detalles a la tabla
 
-    // Crear y agregar tarjetas a la tabla base
-    elementosFiltrados.forEach((elemento) => {
+    // Mostrar todos los elementos
+    listatablaperiodica.forEach((elemento) => {
         const tajet_element = document.createElement("div");
         
         // Asigna la clase según la categoría
         tajet_element.className = `tarjeta ${elemento.categoria.replace(/\s+/g, '-').toLowerCase()}`; // Remplaza espacios por guiones y convierte a minúsculas
+        
+        // Si la categoría del elemento no es la seleccionada, aplicar clase 'gris'
+        if (categoriaSeleccionada !== 'todo' && elemento.categoria.replace(/\s+/g, '-').toLowerCase() !== categoriaSeleccionada) {
+            tajet_element.classList.add('gris'); // Clase para dar estilo gris a los elementos no seleccionados
+        }
 
         // Inserta el contenido HTML
         tajet_element.innerHTML = `
@@ -27,6 +31,14 @@ export function tabla(categoriaSeleccionada = 'todo') {
                 <div class="masa-atomica">${elemento.masaAtomica}</div>
             </div>
         `;
+
+        // Agregar el evento de clic a la tarjeta
+        tajet_element.addEventListener('click', () => {
+            // Limpiar el contenido anterior y añadir la nueva información
+            elementDetails.innerHTML = ''; // Limpiar contenido anterior
+            const infoDiv = divinfoelement(elemento); // Llamar a la función para crear el div con información
+            elementDetails.appendChild(infoDiv); // Añadir el div de información al div de detalles
+        });
 
         // Crea el separador o espacio entre tarjetas
         const espaciob = document.createElement("div");
@@ -76,7 +88,7 @@ export function crearBotonesCategorias(contenedor, contenedorTabla) {
         // Filtrar al hacer clic en el botón
         boton.addEventListener('click', () => {
             contenedorTabla.innerHTML = ''; // Limpiar la tabla
-            contenedorTabla.appendChild(tabla(categoria.replace(/\s+/g, '-').toLowerCase())); // Mostrar solo los elementos de la categoría seleccionada
+            contenedorTabla.appendChild(tabla(categoria.replace(/\s+/g, '-').toLowerCase())); // Mostrar todos los elementos con los que no coinciden en gris
             marcarBotonActivo(boton); // Actualizar el botón activo
         });
         divBotones.appendChild(boton);
@@ -94,4 +106,40 @@ function marcarBotonActivo(boton) {
     const botones = document.querySelectorAll('.boton-categoria');
     botones.forEach(btn => btn.classList.remove('activo')); // Remover la clase 'activo' de todos los botones
     boton.classList.add('activo'); // Añadir la clase 'activo' al botón clicado
+}
+
+
+
+/* mostran informacion al presionar elemento */
+export function divinfoelement(element) {
+    // Crear el div principal elementInfo
+    const elementInfo = document.createElement("div");
+    elementInfo.className = 'elementinfo'; // Asignar clase
+
+    // Crear la mini tarjeta
+    const miniTarjeta = document.createElement("div");
+    miniTarjeta.className = 'mini-tarjeta'; // Asignar clase para la mini tarjeta
+
+    // Añadir contenido a la mini tarjeta
+    miniTarjeta.innerHTML = `
+        <div class="info-div-tarjeta">
+            <div class="simbolo-quimico">${element.simboloQuimico}</div>
+        </div>
+    `;
+
+    // Añadir contenido con la información del elemento
+    elementInfo.innerHTML = `
+        <h3 class="detalleselemento">Detalles del Elemento</h3>
+        <p class="nombreelemento" ><strong>Nombre:</strong> ${element.nombre} (${element.simboloQuimico})</p>
+        <p class="nombreatomico"><strong>Número Atómico:</strong> ${element.numeroAtomico}</p>
+        <p class="nombremasa"><strong>Masa Atómica:</strong> ${element.masaAtomica}</p>
+        <p class="nombreconfiguracion"><strong>Configuración Electrónica:</strong> ${element.configuracionElectronica}</p>
+        <p class="nombrevalencia"><strong>Número de Valencia:</strong> ${element.numerodevalencia.length > 0 ? element.numerodevalencia.join(", ") : "N/A"}</p>
+        <p class="nombrecategoria"><strong>Categoría:</strong> ${element.categoria}</p>
+    `;
+
+    // Agregar la mini tarjeta al div de información
+    elementInfo.appendChild(miniTarjeta);
+
+    return elementInfo;
 }
