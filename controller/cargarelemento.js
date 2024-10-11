@@ -3,6 +3,7 @@ import { tabla, crearBotonesCategorias } from "../componentes/componentes/itemEl
 function divtabla() {
     const contenedorPrincipal = document.createElement('div');
     contenedorPrincipal.className = 'sectiondetablas'; // Clase principal para contener tanto botones como tabla
+    
 
     const contenedorTabla = document.createElement('div');
     contenedorTabla.className = 'contenedor-tabla'; // Contenedor específico para la tabla de elementos

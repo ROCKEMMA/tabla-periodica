@@ -1,5 +1,6 @@
 import { listatablaperiodica } from "../../../assets/listElemetos.js";
-
+import { compuestosArtificiales } from "../../../assets/listArtificiales.js";
+import { compuestosNaturales } from "../../../assets/listNaturales.js";
 export function tabla(categoriaSeleccionada = 'todo') {
     const tablabase = document.createElement("div");
     tablabase.className = 'tablabase';
@@ -10,7 +11,7 @@ export function tabla(categoriaSeleccionada = 'todo') {
     elementDetails.style.marginTop = '20px';
     tablabase.appendChild(elementDetails); // Añadir el div de detalles a la tabla
 
-    // Mostrar todos los elementos
+    // Mostrar todos los elementos de la tabla periódica
     listatablaperiodica.forEach((elemento) => {
         const tajet_element = document.createElement("div");
         
@@ -54,6 +55,29 @@ export function tabla(categoriaSeleccionada = 'todo') {
     });
 
     return tablabase;
+}
+
+// Función para mostrar compuestos artificiales
+function mostrarCompuestosArtificiales(contenedorTabla) {
+    // Limpiar el contenedor de la tabla
+    contenedorTabla.innerHTML = '';
+
+    // Iterar sobre cada compuesto artificial y crear su tarjeta
+    compuestosArtificiales.forEach((compuesto) => {
+        const tarjetaCompuesto = document.createElement("div");
+        tarjetaCompuesto.className = `tarjeta-compuesto ${compuesto.categoria.replace(/\s+/g, '-').toLowerCase()}`;
+
+        // Añadir el contenido de la tarjeta
+        tarjetaCompuesto.innerHTML = `
+            <div class="info-div-compuesto">
+                <div class="nombre-compuesto"><strong>Nombre:</strong> ${compuesto.nombre} (${compuesto.simbolo})</div>
+                <div class="formula-quimica"><strong>Fórmula Química:</strong> ${compuesto.formulaQuimica}</div>
+            </div>
+        `;
+
+        // Agregar la tarjeta al contenedor
+        contenedorTabla.appendChild(tarjetaCompuesto);
+    });
 }
 
 // Menu Filtro
@@ -108,9 +132,17 @@ function marcarBotonActivo(boton) {
     boton.classList.add('activo'); // Añadir la clase 'activo' al botón clicado
 }
 
+// Evento de clic en el enlace de "Compuestos Artificiales"
+const li1 = document.querySelector('.logo + nav ul li:nth-child(1) a'); // Ajusta el selector si es necesario
 
+li1.addEventListener('click', (e) => {
+    e.preventDefault(); // Prevenir el comportamiento predeterminado del enlace
 
-/* mostran informacion al presionar elemento */
+    const contenedorTabla = document.querySelector('.tablabase'); // Asegúrate de seleccionar el contenedor correcto
+    mostrarCompuestosArtificiales(contenedorTabla); // Llamar a la función para mostrar los compuestos artificiales
+});
+
+/* Mostrar información al presionar elemento */
 export function divinfoelement(element) {
     // Crear el div principal elementInfo
     const elementInfo = document.createElement("div");
@@ -143,3 +175,35 @@ export function divinfoelement(element) {
 
     return elementInfo;
 }
+
+function mostrarCompuestosNaturales(contenedorTabla) {
+    // Limpiar el contenedor de la tabla
+    contenedorTabla.innerHTML = ''; 
+
+    // Iterar sobre cada compuesto natural y crear su tarjeta
+    compuestosNaturales.forEach((compuesto) => {
+        const tarjetaCompuesto = document.createElement("div");
+        tarjetaCompuesto.className = `tarjeta-compuesto ${compuesto.categoria.replace(/\s+/g, '-').toLowerCase()}`;
+
+        // Añadir el contenido de la tarjeta
+        tarjetaCompuesto.innerHTML = `
+            <div class="info-div-compuesto">
+                <div class="nombre-compuesto"><strong>Nombre:</strong> ${compuesto.nombre} (${compuesto.simbolo})</div>
+                <div class="formula-quimica"><strong>Fórmula Química:</strong> ${compuesto.formulaQuimica}</div>
+            </div>
+        `;
+
+        // Agregar la tarjeta al contenedor
+        contenedorTabla.appendChild(tarjetaCompuesto);
+    });
+}
+
+// Evento de clic en el enlace de "Compuestos Naturales"
+const li2 = document.querySelector('.logo + nav ul li:nth-child(2) a'); // Ajusta el selector si es necesario
+
+li2.addEventListener('click', (e) => {
+    e.preventDefault(); // Prevenir el comportamiento predeterminado del enlace
+
+    const contenedorTabla = document.querySelector('.tablabase'); // Asegúrate de seleccionar el contenedor correcto
+    mostrarCompuestosNaturales(contenedorTabla); // Llamar a la función para mostrar los compuestos naturales
+});

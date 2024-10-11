@@ -18,24 +18,20 @@ const nav = document.createElement('nav');
 // Crear la lista desordenada (ul)
 const ul = document.createElement('ul');
 
+// Función para crear un elemento de lista (li) con su enlace (a)
+function createListItem(text, href) {
+    const li = document.createElement('li');
+    const a = document.createElement('a');
+    a.href = href;
+    a.textContent = text;
+    li.appendChild(a);
+    return li;
+}
+
 // Crear los elementos de la lista (li) y sus enlaces (a)
-const li1 = document.createElement('li');
-const a1 = document.createElement('a');
-a1.href = '#';
-a1.textContent = 'Repositorio';
-li1.appendChild(a1);
-
-const li2 = document.createElement('li');
-const a2 = document.createElement('a');
-a2.href = '#';
-a2.textContent = 'Integrantes';
-li2.appendChild(a2);
-
-const li3 = document.createElement('li');
-const a3 = document.createElement('a');
-a3.href = '#';
-a3.textContent = 'Discord';
-li3.appendChild(a3);
+const li1 = createListItem('Compuestos Artificiales', '#');
+const li2 = createListItem('Compuestos Naturales', '#');
+const li3 = createListItem('Discord', '#');
 
 // Agregar los elementos li a la ul
 ul.appendChild(li1);
@@ -44,7 +40,7 @@ ul.appendChild(li3);
 
 // Crear el enlace de GitHub y asignarle la clase
 const githubLink = document.createElement('a');
-githubLink.href = '#';
+githubLink.href = 'https://github.com/ROCKEMMA/tabla-periodica-estuardo';
 githubLink.className = 'github-btn';
 githubLink.textContent = 'GitHub';
 
@@ -61,4 +57,5 @@ header.appendChild(nav);
 // Agregar el header al body del documento
 document.body.appendChild(header);
 
-export{header}
+// Exportar el header
+export { header };
