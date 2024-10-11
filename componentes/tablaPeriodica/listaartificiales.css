@@ -1,0 +1,99 @@
+
+
+
+.info-div-compuesto{
+    display: grid;
+    width: 100%;
+    height: 100%;
+
+    grid-column-start: 1;
+    grid-column-end: 4;
+
+    grid-row-start: 1;
+    grid-row-end: 5;
+    gap: 1rem;
+}
+.plástico{
+    border-radius: 0.5rem;
+    
+    display: grid;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(123, 137, 189);
+
+   grid-template-columns: repeat(5,1fr);
+   grid-template-rows: repeat(2,1fr);
+
+}
+.químico-industrial{
+      border-radius: 0.5rem;
+    
+    display: grid;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(123, 189, 158);
+
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(2,1fr);
+}
+.material-de-alta-tecnología{
+    border-radius: 0.5rem;
+    
+    display: grid;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(177, 123, 189);
+
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(2,1fr);
+}
+.farmacéutico{
+    border-radius: 0.5rem;
+    
+    display: grid;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(189, 159, 123);
+
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(2,1fr);
+}
+.explosivos{
+    border-radius: 0.5rem;
+    
+    display: grid;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(189, 123, 123);
+
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(2,1fr); 
+}
+.nombre-compuesto{
+    font-size: 0.8rem;
+    display: grid;
+    grid-column-start:1;
+    grid-column-end:3;
+    grid-row-start:2;
+    grid-row-end:3;
+    
+}
+.formula-quimica{
+    font-size: 0.8rem;
+    display: grid;
+    grid-column-start:1;
+    grid-column-end:3;
+    grid-row-start:1;
+    grid-row-end:2;
+}
+.cosmético{
+    border-radius: 0.5rem;
+    
+    display: grid;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(189, 123, 172);
+
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(2,1fr); 
+}
